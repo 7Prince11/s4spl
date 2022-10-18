@@ -1,6 +1,6 @@
 const fs = require('fs');
 const process = require('process');
-const io = require('socket.io')(process.env.PORT || 3000, {
+const io = require('socket.io')(3000, {
 
 
 })

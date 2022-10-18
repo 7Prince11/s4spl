@@ -1,4 +1,4 @@
-const socket = io('https://s4spl.herokuapp.com/');
+const socket = io('http://localhost:3000');
 
 //{ transports: ["websocket"] }
 
