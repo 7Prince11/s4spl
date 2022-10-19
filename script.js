@@ -1,5 +1,5 @@
-const socket = io('http://localhost:3000');
-
+const socket = io('https://s4spl.herokuapp.com/');
+//change to hosting url
 //{ transports: ["websocket"] }
 
 const messageContainer = document.getElementById('message-container')
