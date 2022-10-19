@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #444;
+        }
+
+        #main-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #message-container {
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        #message-container div {
+
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: #fe7f00;
+            border-radius: 20px;
+
+
+            padding: 5px 10px 5px 10px;
+        }
+
+        #message-container div:nth-child(2n) {
+            margin: 10px 0 10px 0;
+            background-color: #f5f5f5;
+        }
+
+        #send-container {
+            position: fixed;
+            padding-bottom: 30px;
+            bottom: 0;
+            max-width: 1200px;
+            width: 80%;
+            display: flex;
+        }
+
+        #message-input {
+            padding: 5px 10px 5px 10px;
+            flex-grow: 1;
+            background-color: #686a6c;
+            color: white;
+            border: none;
+            border-radius: 20px;
+        }
+
+        #send-button {
+            margin-left: 10px;
+            border-radius: 20px;
+            padding: 5px 20px;
+            border: none;
+            background-color: #fe7f00;
+            cursor: pointer;
+        }
+
+        #send-button>img {
+            width: 25px;
+            padding-top: 5px;
+        }
+
+        h1 {
+            color: #fe7f00;
+            text-align: center;
+
+        }
+
+        #who-join-us {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: #fe7f00;
+            border-radius: 20px;
+            width: 75%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px 5px 5px 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* #fe7f00 , #ffffff and #686a6c */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="../menu z czatem/index.html" class="logo">S4S</a>
+            <ul id="navigation">
+                <li><a href="../menu z czatem/index.html" class="btn">Start</a></li>
+                <li><a href="../Konkurs/Timer-main/index.html" class="btn">Czas Nauki</a></li>
+                <li><a href="../Konkurs/czat/index.html" class="btn">Czat</a></li>
+                <li><a href="../../search/index.html" class="active">Szukaj</a></li>
+                <li><a href="../menu z czatem/four.html" class="btn">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="search-form" style="padding-top: 100px; display: flex; justify-content: center; margin-bottom: 20px;">
+        <input type="text" id="search-input" style="border: none; border-radius: 40px; height: 30px; width: 300px;">
+        <button type="submit" style="background-color: transparent; border: none; margin-left: 10px;"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="white"
+                style="cursor: pointer; background: transparent; border-radius: 40px;" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path
+                    d="M23.111 20.058l-4.977-4.977c.965-1.52 1.523-3.322 1.523-5.251 0-5.42-4.409-9.83-9.829-9.83-5.42 0-9.828 4.41-9.828 9.83s4.408 9.83 9.829 9.83c1.834 0 3.552-.505 5.022-1.383l5.021 5.021c2.144 2.141 5.384-1.096 3.239-3.24zm-20.064-10.228c0-3.739 3.043-6.782 6.782-6.782s6.782 3.042 6.782 6.782-3.043 6.782-6.782 6.782-6.782-3.043-6.782-6.782zm2.01-1.764c1.984-4.599 8.664-4.066 9.922.749-2.534-2.974-6.993-3.294-9.922-.749z" />
+            </svg></button>
+    </form>
+    <div id="search-results"></div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/344/timer.png">
+    <title>Timer</title>
+    <style>
+        body {
+            background-color: #444;
+        }
+    
+        #main-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    
+        #message-container {
+            width: 80%;
+            max-width: 1200px;
+        }
+    
+        #message-container div {
+    
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: #fe7f00;
+            border-radius: 20px;
+    
+    
+            padding: 5px 10px 5px 10px;
+        }
+    
+        #message-container div:nth-child(2n) {
+            margin: 10px 0 10px 0;
+            background-color: #f5f5f5;
+        }
+    
+        #send-container {
+            position: fixed;
+            padding-bottom: 30px;
+            bottom: 0;
+            max-width: 1200px;
+            width: 80%;
+            display: flex;
+        }
+    
+        #message-input {
+            padding: 5px 10px 5px 10px;
+            flex-grow: 1;
+            background-color: #686a6c;
+            color: white;
+            border: none;
+            border-radius: 20px;
+        }
+    
+        #send-button {
+            margin-left: 10px;
+            border-radius: 20px;
+            padding: 5px 20px;
+            border: none;
+            background-color: #fe7f00;
+            cursor: pointer;
+        }
+    
+        #send-button>img {
+            width: 25px;
+            padding-top: 5px;
+        }
+    
+        h1 {
+            color: #fe7f00;
+            text-align: center;
+    
+        }
+    
+        #who-join-us {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-color: #fe7f00;
+            border-radius: 20px;
+            width: 75%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px 5px 5px 10px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    
+        /* #fe7f00 , #ffffff and #686a6c*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+          </label>
+          <a href="../../menu z czatem/index.html" class="logo">S4S</a>
+          <ul id="navigation">
+          <li><a href="../../menu z czatem/index.html" class="btn">Start</a></li>
+          <li><a href="index.html" class="active">Czas Nauki</a></li>
+          <li><a href="../czat/index.html" class="btn">Czat</a></li>
+          <li><a href="../../search/index.html" class="btn">Szukaj</a></li>
+          <li><a href="../../menu z czatem/four.html" class="btn">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+        <h1>Regulator czasowy dla uczniów </h1>
+
+
+        <div class="timer">
+            <div class="timer__block">
+                <div class="time hours">00</div>
+                <div class="title">Godziny</div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time minutes">00</div>
+                <div class="title">Minuty</div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time seconds">00</div>
+                <div class="title">Sekundy</div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time miliseconds">00</div>
+                <div class="title">Milisekundy</div>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button class="button start">Początek</button>
+            <button class="button pause">Pauza</button>
+            <button class="button stop">Zatrzymaj</button>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="ts_js/times.js"></script>
+
+</body>
+
+</html>

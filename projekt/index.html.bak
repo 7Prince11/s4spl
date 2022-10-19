@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lng="pl">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<style>
+section
+{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #ffffff, #dff1ff);
+}
+
+.color
+{
+    position: absolute;
+    filter: blur(150px);
+}
+
+.color:nth-child(1)
+{
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #fe7f00;
+}
+
+.color:nth-child(2)
+{
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    background: #ffa500;
+}
+
+.color:nth-child(3)
+{
+    right:100px;
+    bottom:50px;
+    width:300px;
+    background: #2b67f3;
+}
+
+.container
+{
+    width: 400px;
+    min-height: 200px;
+    border-radius: 10px;
+    backdrop-filter:blur(5px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.form
+{
+    width: 100px;
+    height: 200px;
+    padding: 50px;
+
+}
+
+h2
+{
+    color:#686a6c;
+    font-size: 24px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.input_log .form
+{
+    width:100px;
+    margin-bottom: 20px;
+}
+
+.input_log
+{
+    margin-bottom:20px;
+}
+
+.form .input_log input
+{
+    width:170px;
+    color:#686a6c;
+    border:none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    border-radius: 35px;
+    background: rgba(255,255,255,0.2);
+    border:1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.input_log input[type="submit"]
+{
+    color:#666;
+    cursor: pointer;
+    background: #fff;
+    max-width: 100px;
+    font-weight: 600px;
+}
+</style>
+</head>
+<body>
+<section>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="container">
+        <div class="form">
+            <h2>Logowanie</h2>
+            <form action="insert.php" method="post">
+                <div class="input_log" class="form-group">
+                    <input type="text" name="login" placeholder="Login">
+                </div>
+                <div class="input_log" class="form-group">
+                    <input type="password" name="haslo" placeholder="Hasło">
+                </div>
+                <div class="input_log">
+                    <input type="submit" name="submit" value="Zaloguj">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>
