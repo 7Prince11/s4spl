@@ -12,10 +12,11 @@
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   background-color: #000;
   color: #fff;
   padding: 0 20px;
+  min-width: fit-content;
 }
 
 header nav {
@@ -127,6 +128,7 @@ body {
   background-color: #444;
   font-family: "Kanit" !important;
   letter-spacing: 2px;
+
 }
 
 * {
@@ -136,10 +138,12 @@ body {
 }
 
 .container {
-  width: 60%;
+
+
   margin: 0 auto;
   height: 100%;
   margin-top: 15vh;
+  min-width: 170px !important;
 }
 
 h1 {
@@ -150,12 +154,14 @@ h1 {
 }
 
 .timer {
-  justify-content: space-between;
+
+  justify-content: center;
   display: flex;
   align-items: center;
 }
 
 .timer__block {
+  margin: 0px 20px 0px 20px;
   width: 150px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
