@@ -6,7 +6,7 @@ if(isset($_POST['submit']))
      $haslo = $_POST['haslo'];
      $sql = "INSERT INTO hasla (login,haslo) VALUES ('$login','$haslo')";
      if (mysqli_query($conn, $sql)) {
-        header('Location: php_login/index.html');
+        header('Location: index.html');
      } else {
         header('Location: https://s4spl2022.000webhostapp.com/rejestracja.html');
      }

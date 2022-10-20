@@ -7,11 +7,11 @@ const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
 const whoJoins = document.getElementById('who-join-us')
-const myname = prompt('Wpisz imie')
+console.log(user)
 
 
 
-socket.emit('new-user', myname)
+socket.emit('new-user', user)
 
 
 
@@ -39,7 +39,7 @@ socket.on('user-disconnected', name => {
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value
-    appendMessage(`${myname}: ${message}`)
+    appendMessage(`${user}: ${message}`)
     socket.emit('send-chat-message', message)
     console.log(message)
     messageInput.value = ''
