@@ -8,13 +8,11 @@ const messageInput = document.getElementById('message-input')
 
 const whoJoins = document.getElementById('who-join-us')
 
-
-const userName = localStorage.getItem('user')
-
+const myname = alert('Podaj swoje imię')
 
 
 
-socket.emit('new-user', userName)
+socket.emit('new-user', myname)
 
 
 
@@ -42,7 +40,7 @@ socket.on('user-disconnected', name => {
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value
-    appendMessage(`${userName}: ${message}`)
+    appendMessage(`${myname}: ${message}`)
     socket.emit('send-chat-message', message)
     console.log(message)
     messageInput.value = ''
@@ -59,4 +57,4 @@ function appendMessages(messages) {
     }
 }
 
-whoJoins.innerHTML = `Witamy w naszym chacie <br> Nazywasz się : ${userName}`
+whoJoins.innerHTML = `Witamy w naszym chacie <br> Nazywasz się : ${myname}`
