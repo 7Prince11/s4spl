@@ -29,11 +29,11 @@ socket.on('chat-message', data => {
 
 
 socket.on('user-connected', name => {
-    appendMessage(`${name} connected`)
+    appendMessage(`${name} połączony`)
 })
 
 socket.on('user-disconnected', name => {
-    appendMessage(`${name} disconnected`)
+    appendMessage(`${name} odłączony`)
 })
 
 messageForm.addEventListener('submit', e => {
@@ -56,4 +56,4 @@ function appendMessages(messages) {
     }
 }
 
-whoJoins.innerHTML = `You jointed us <br> Your name is : ${myname}`
+whoJoins.innerHTML = `Witamy w naszym chacie <br> Nazywasz się : ${myname}`
