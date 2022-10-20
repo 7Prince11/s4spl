@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Kanit";
-  src: url("../fonts/Kanit-Regular.ttf");
+  src: url("fonts/Kanit-Regular.ttf");
 }
 
 * {
@@ -9,6 +9,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: "Kanit";
 }
 
 header {
@@ -55,7 +56,8 @@ nav ul a {
   transition: .4s;
 }
 
-.active,nav ul a:hover {
+.active,
+nav ul a:hover {
   background: #fe7f00;
   padding: 10px;
   color: #000;
@@ -114,7 +116,7 @@ section#order {
 
 .credit {
   text-align: center;
-  font-family: Verdana,Geneva,Tahoma,sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #FFF;
   font-size: 15px;
   padding-top: 500px;
