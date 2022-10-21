@@ -139,10 +139,9 @@ body {
 
 .container {
 
-
   margin: 0 auto;
   height: 100%;
-  margin-top: 15vh;
+  margin: 15vh 10vh 15vh 10vh;
   min-width: 170px !important;
 }
 
