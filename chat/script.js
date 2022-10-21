@@ -42,13 +42,16 @@ socket.on('user-disconnected', name => {
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value
+
+
+
+
     if (message != '') {
         appendMessage(`Ty: ${message}`)
         socket.emit('send-chat-message', message)
         messageInput.value = ''
     }
     else return false
-
     messageInput.value = ''
 })
 function appendMessage(message) {

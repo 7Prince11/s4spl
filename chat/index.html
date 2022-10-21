@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Students4Students">
+    <meta name="description" content="Strona przeznaczona pomocy uczniom i komunikacji między nimi.">
+    <meta name="keywords" content="Pomoc, Nauka, Czat, Szkoła, Czas nauki, Uczeń, Student">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Polish">
+    <meta name="revisit-after" content="2 days">
+    <meta name="author" content="Julia Korpała, Oleksandr Lysyj, Karol Stach, Jakub Sowula">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-    <title>S4S</title>
+    <title>Czat | S4S</title>
     <script defer src="socket.io.js"></script>
     <script defer src="script.js"></script>
     <script src="../php_login/variables.js">
@@ -135,24 +142,18 @@
             <div id="who-join-us">
             </div>
         </div>
+    </div>
+    <div id="main-container">
+        <div id="message-container"></div>
+        <div>
+        </div>
 
-        <div id="main-container">
-            <div id="message-container"></div>
-            <div>
-            </div>
-
-            <footer>
-                <form id="send-container">
-                    <input type="text" id="message-input">
-                    <button type="submit" id="send-button"> <img src="icons/send.png"> </button>
-                </form>
-            </footer>
-
-            <script>
-
-            </script>
-
-
+        <footer>
+            <form id="send-container">
+                <input type="text" id="message-input">
+                <button type="submit" id="send-button"> <img src="icons/send.png" alt="send"> </button>
+            </form>
+        </footer>
 </body>
 
 </html>
