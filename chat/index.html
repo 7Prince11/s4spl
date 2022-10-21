@@ -20,12 +20,14 @@
 
         #main-container {
             width: 100%;
+
             display: flex;
             justify-content: center;
+            margin-bottom: 90px;
         }
 
         #message-container {
-            width: 80%;
+            width: 100vh;
             max-width: 1200px;
         }
 
@@ -94,6 +96,17 @@
             margin-bottom: 10px;
         }
 
+        footer {
+
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+        }
+
         /* #fe7f00 , #ffffff and #686a6c*/
     </style>
 </head>
@@ -122,20 +135,25 @@
             <div id="who-join-us">
             </div>
         </div>
+
         <div id="main-container">
-
-
-
             <div id="message-container"></div>
-            <form id="send-container">
-                <input type="text" id="message-input">
-                <button type="submit" id="send-button"> <img src="icons/send.png"> </button>
-            </form>
             <div>
             </div>
 
+            <footer>
+                <form id="send-container">
+                    <input type="text" id="message-input">
+                    <button type="submit" id="send-button"> <img src="icons/send.png"> </button>
+                </form>
+            </footer>
 
-
+            <script>
+                window.setInterval(function () {
+                    var elem = document.getElementById('main-container');
+                    elem.scrollTop = elem.scrollHeight
+                }, 5000)
+            </script>
 
 
 </body>
