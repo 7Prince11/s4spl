@@ -8,7 +8,7 @@ const messageInput = document.getElementById('message-input')
 
 const whoJoins = document.getElementById('who-join-us')
 
-const myname = 'Olek'
+const myname = prompt('Podaj swoje imię')
 
 
 
