@@ -18,14 +18,16 @@ socket.emit('new-user', myname)
 
 
 socket.on('old-messages', (messages) => {
-    console.log(messages)
+
     appendMessages(JSON.parse(messages))
 })
 
 
 socket.on('chat-message', data => {
     const message = data
+
     appendMessage(`${message.name}: ${message.message}`)
+
 })
 
 
@@ -40,9 +42,13 @@ socket.on('user-disconnected', name => {
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value
-    appendMessage(`${myname}: ${message}`)
-    socket.emit('send-chat-message', message)
-    console.log(message)
+    if (message != '') {
+        appendMessage(`Ty: ${message}`)
+        socket.emit('send-chat-message', message)
+        messageInput.value = ''
+    }
+    else return false
+
     messageInput.value = ''
 })
 function appendMessage(message) {
